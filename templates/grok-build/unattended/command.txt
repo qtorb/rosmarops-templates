@@ -1,0 +1,1 @@
+grok -p "<task>" --permission-mode dontAsk --sandbox strict --deny "WebFetch"

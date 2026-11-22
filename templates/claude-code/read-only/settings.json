@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "defaultMode": "plan",
+    "disableAutoMode": "disable",
+    "disableBypassPermissionsMode": "disable",
+    "blockReadsOutsideWorkingDirectories": true,
+    "deny": ["Edit", "Bash", "WebFetch", "WebSearch", "mcp__*"]
+  }
+}

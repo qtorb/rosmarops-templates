@@ -1,0 +1,20 @@
+[ui]
+permission_mode = "ask"
+
+[permission]
+rules = [
+  { action = "deny", tool = "edit" },
+  { action = "deny", tool = "bash" },
+  { action = "deny", tool = "webfetch" },
+  { action = "deny", tool = "mcp" },
+]
+deny = ["WebSearch"]
+
+[sandbox]
+profile = "read-only"
+
+[compat.claude]
+hooks = false
+
+[compat.cursor]
+hooks = false

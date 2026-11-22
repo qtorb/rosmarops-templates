@@ -7,7 +7,7 @@ A rule in a prompt is advice the model can skip. A permission setting is enforce
 ## How to use them
 1. Open the folder of your agent in `templates/`.
 2. Pick the use that fits how you work. Each one says what the agent can do without asking and what it asks first.
-3. Copy the file into your project, or ask the RosmarOps skill to do it: it shows you the change before saving it.
+3. Copy the file's content into your user settings (the path is in each folder's README). It applies to all your projects.
 
 ## What can your agents actually do?
 These templates set what an agent may do. To see what your agents can really reach on your computer, and how one agent can change another, try RosmarOps. It checks without anything leaving your computer: https://rosmarops.com

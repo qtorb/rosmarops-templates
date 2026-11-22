@@ -1,0 +1,21 @@
+[ui]
+permission_mode = "ask"
+
+[permission]
+rules = [
+  { action = "allow", tool = "bash", pattern = "npm run lint" },
+  { action = "allow", tool = "bash", pattern = "npm run test *" },
+  { action = "allow", tool = "bash", pattern = "git status" },
+  { action = "allow", tool = "bash", pattern = "git diff" },
+  { action = "deny",  tool = "webfetch" },
+]
+deny = ["WebSearch"]
+
+[sandbox]
+profile = "strict"
+
+[compat.claude]
+hooks = false
+
+[compat.cursor]
+hooks = false
