@@ -1,0 +1,4 @@
+claude -p "<task>" \
+  --permission-mode dontAsk \
+  --strict-mcp-config --mcp-config '{"mcpServers":{}}' \
+  --settings '{"disableAllHooks": true, "permissions": {"allow": ["Bash(npm run lint)", "Bash(npm run test *)", "Bash(git status)", "Bash(git diff)"], "deny": ["WebFetch", "WebSearch"]}}'

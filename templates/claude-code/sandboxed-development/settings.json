@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "defaultMode": "acceptEdits",
+    "disableAutoMode": "disable",
+    "disableBypassPermissionsMode": "disable",
+    "blockReadsOutsideWorkingDirectories": true,
+    "allow": [
+      "Bash(npm run lint)", "Bash(npm run test *)",
+      "Bash(git status)", "Bash(git diff)"
+    ],
+    "ask": [
+      "Edit(~/.codex/**)", "Edit(**/.codex/**)",
+      "Edit(~/.cursor/**)", "Edit(**/.cursor/**)",
+      "Edit(~/.cline/**)", "Edit(**/.clinerules/**)",
+      "Edit(~/.gemini/**)", "Edit(**/.gemini/**)",
+      "Edit(~/.grok/**)", "Edit(**/.grok/**)", "Edit(~/.hermes/**)",
+      "Edit(~/AppData/Roaming/**)",
+      "Edit(**/AGENTS.md)", "Edit(**/CLAUDE.md)", "Edit(**/GEMINI.md)",
+      "Edit(**/.github/copilot-instructions.md)"
+    ],
+    "deny": ["WebFetch", "WebSearch", "Bash(curl *)", "Bash(wget *)"]
+  },
+  "sandbox": {
+    "enabled": true,
+    "failIfUnavailable": true,
+    "allowUnsandboxedCommands": false,
+    "autoAllowBashIfSandboxed": false,
+    "network": { "allowedDomains": ["registry.npmjs.org", "github.com"], "strictAllowlist": true },
+    "filesystem": { "denyRead": ["~/.ssh", "~/.aws"] },
+    "credentials": { "files": [ { "path": "~/.aws/credentials", "mode": "deny" }, { "path": "~/.ssh", "mode": "deny" } ] }
+  }
+}
